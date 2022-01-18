@@ -1,0 +1,12 @@
+create table Market(
+Company_name varchar(255),
+Open int, 
+Close int);
+
+insert into Market(Company_name, Open, Close) 
+values(‘Apple’,155,157),
+(‘AMD’,23,33),
+(‘Microsoft’,120,125);
+
+select Company_name, Open, Close,
+(Open/Close)*100 as Daily_Percent_Change from Market;
